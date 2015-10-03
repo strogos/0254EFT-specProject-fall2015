@@ -1,0 +1,178 @@
+\chapter{Background and Theory}
+  
+    Technological advances towards a type of electromechanical or biomedical augmentation of the human body which remedies,
+    improves or maybe even grants the user a new set of abilities are intriguing thoughts for anyone with a little \emph{cyberpunk} in them. There is still
+    quite a long way before any such leaps in technology are possible though. However, forcing oneself into more pragmatical ways of thinking, there is no doubt that 
+    demands for technologies enabling scientists and clinicians to record neural activity from a large number of neurons in a brain is continuously rising.
+    Namely collecting high temporal and spatial resolution neural data from micromachined multielectrode arrays is something that can be regarded standard practice in basic neuroscientifical
+    research \cite{harrison2003low}. Such research is starting to enable medical, as well as neuroprosthetic applications, and 
+    we see that neural recordings can provide scientific insight into the neural correlates of cognitive, sensory and motor processes. \cite{miller2007spectral,chang2010categorical,gunduz2011neural}
+              
+%--------------------------figure-------------------------------------------------------------------    
+    \begin{wrapfigure}{r}{5.7cm}
+      \vspace{-20pt}
+      \caption{\texttt{\footnotesize{block diagram of a wireless neural recording device}}}
+      \includegraphics[width=5.7cm]{images/block-wirelss-neural-rec-dev.png}
+      \vspace{-20pt} 
+      \label{fig:block-neural-recording-dev}
+    \end{wrapfigure} 
+%--------------------------END-------------------------------------------------------------------             
+
+      In the efforts to implement wholly implantable devices for neural recording, 
+    \acf{MEMS} electrode arrays are complimented with \acf{CMOS} \acl{IC}s 
+    in such a way that one achieves parallel stand-alone recording systems with on-board wireless data and power transfer, as well as \acs{ADC}s and a processor \cite{najafi1986implantable,wise2004wireless,olsson2005three}. 
+    The design scope for this project is, however, limited to propose a design for a \acs{LNA} front-end compatible for integration in such a system. A block diagram 
+    illustrating our focal point in a complete biomedical \acs{IC} which also has an interface for stimulation is shown in figure \ref{fig:block-arch-biomedical-subsystem}.
+%--------------------------figure-------------------------------------------------------------------
+    \begin{figure}
+	\centering
+	\includegraphics[scale=.4]{images/block-bio-medical-subsystem.png}
+	\caption{\texttt{\footnotesize{typical architecture of bio-medical \acs{IC} subsystem \cite{yoo2011biomedical-cmos}}}}
+	\label{fig:block-arch-biomedical-subsystem}
+    \end{figure}       
+    Further on, a block diagram depicting the principle for a multi-electrode wireless neural interface is given in figure \ref{fig:block-neural-recording-dev}. 
+%--------------------------END-------------------------------------------------------------------    
+          
+
+\section{Theory}
+\label{sec:theory}
+ As mentioned, this reports main focal point will be on the design of a \acs{LNA} front-end for a transducer utilizing a type of platinum-iridium based electrodes. 
+ As such we will start exploring basic characteristics of neural signals and some practicalities on recording them, before we dig into the electronics theory necessary for us to 
+ determine a design methodology for the neural interface front-end.
+  \subsection{Neural Recording through Biopotential Acquisition}
+  \label{subsec:biopotential-aquisition}
+  Neural recording devices basically performs biopotential acquisition using transducers that converts ionic conduction to electronic conduction so that biopotential 
+  signals can be stored and viewed. The biopotential signals themselves are generated due to electrochemical activity of electrogenic cells\footnote{\emph{Electrogenic cells} 
+  refers to cells that exhibit the ability to generate electrical signals\cite{GBM8320-2013-electrodes-ch8-pt1}} - such as neurons, that are components of muscular, 
+  nervous or glandular tissue. There are several measurement variations that are relevant for collecting biopotential data, whereas the ones considered most relevant 
+  for the scope of this report are \emph{\acf{EEG}}, \emph{\acf{ECoG}} and \emph{\acf{iEEG}} (also commonly referred to by the somewhat misleading term \emph{\acf{LFP}}).
+  
+    From a historical perspective one usually refers to surface recording - that is, placing electrodes on top of the scalp - as \acs{EEG}, while \acs{ECoG} and \acs{iEEG} have coined the use of in-vivo
+  intercranial electrodes in order to record electrical activity in the brains cerebral cortex\footnote{The \emph{cerebral cortex} is the outermost sheet of neural tissue covering the cerebral hemispheres in mammals. \cite{marcus2014future}}.
+	More specifically on in-vivo recording; \acs{iEEG}\textbackslash\acs{LFP} is usually referred to when recordings are performed using small electrodes placed directly into the cortex from beneath the skull,
+  while with \acs{ECoG} recordings one places the electrodes on the surface of the cortex.%\\*  
+  
+  
+    \subsubsection{The Neural Signals}
+     \label{subsubsec:neural-signals}
+%--------------------------figure-------------------------------------------------------------------        
+    \begin{wrapfigure}{r}{4.5cm}
+      \vspace{-30pt}
+      \caption{\texttt{\footnotesize{recording of an action potential}}}
+      \includegraphics[width=4.5cm]{images/intracellular-amp-vs-extracellular-amp.png}
+      \vspace{-35pt} 
+      \label{fig:intracell-vs-extracell}
+    \end{wrapfigure}
+%--------------------------END-------------------------------------------------------------------
+    We have have explained that there exists multiple measurement types for recording cortical activity. Biopotential signals generated by electrogenic cells like neurons, produce voltage changes on the order of 100 mV relative to the 
+    extracellular fluid \cite{kandel2000principles}. Collecting measurements of this type is possible     
+    in brief periods of time by carefully directing individual placement of microelectrodes intracellularly\footnote{\emph{Intracellular} means "inside the cell"}.
+    To get around the limitations of only detecting single cells at a time - and for such short durations, the prime methodology at present is using microelectrode arrays
+    extracellularly (though there exists rudimentary initiatives to merge the advantages of extracellular microelectrode arrays and intracellular microelectrodes, they have
+    still not gained significant usability) \cite{spira2013multi}. A trade-off here is that we accept "blindness" to potentials generated by single cells as well as a significant
+    reduction in signal amplitude. From figure \ref{fig:intracell-vs-extracell} (adapted from \cite{extracell-action-pot-2009}) we can see that the shape of the extracellular 
+    voltage potential qualitatively matches the second time derivative of the intracellular voltage potential \cite{cohen2000contributions}. Note that the resulting variation 
+    in cellular potential with time is known as the action potential \cite{GBM8320-2013-electrodes-ch8-pt1}. Action potentials can be interpreted as "digital" events  - neurons
+    normally induce spikes of similar amplitudes and time durations, and information is said to be found in the timing of these "digital" events \cite{harrison2008design}.
+    
+    A measurement type can be characterized by their signal strength (which we can see from fig.\ref{fig:cortical-measurements} is usually in the $\mu$-volts range) and surgical invasiveness 
+    versus frequency and electrode area. This is presented in figure \ref{fig:cortical-measurements}.   
+%--------------------------figure-------------------------------------------------------------------        
+      \begin{figure}
+	\centering
+	\includegraphics[scale=.75]{images/Amp-vs-freq-common-biopotential-signals2.png}
+	\caption{\texttt{\footnotesize{different cortical measurements \cite{yoo2011biomedical-cmos}}}}
+	\label{fig:cortical-measurements}
+      \end{figure}
+%--------------------------END-------------------------------------------------------------------
+    \acs{ECoG} signals is measured using subdural surface electrodes (refer to 1. on fig.\ref{fig:neural-probe}). This type of measurement is outside of our design scope due to frequency range,
+    but it can be mentioned that the method offers significant increase in spatial and temporal resolutions as well as stronger amplitudes - especially in 
+    the high gamma frequency range\footnote{Gamma frequency ranges between ~70Hz to ~110Hz\cite{hill2012recording}}, 
+    in contrast to the non-invasive surface based \acs{EEG} topologies \cite{hill2012recording}.
+    \acs{LFP} oscillations differs from \acs{ECoG} in that LFPs are recorded from within the cortical tissue (illustrated by 2. in fig.\ref{fig:neural-probe}). 
+    It is considered the internal correlate of \acs{ECoG} as it registers as the same "crowd noise" - that is synchronous activity of many neurons in one region of the brain,
+    as ECoG recording, only with substantial blurring and attenuations. The signal deterioration happens because LFP oscillations is usually measured using microelectrode arrays \cite{harrison2008design}.
+    This means it is unavoidably detected with microelectrode arrays, even though one might only be after action potentials. However often it is beneficial to record both LFP together 
+    action potential spikes and then apply linear filtering - which should be fairly easy to achieve considering frequency ranges are mostly different for
+    the two signal types. LFPs are interesting for the same reasons that ECoG signals are; they have among other things been especially suitable in understanding motor movements of the body \cite{donoghue1998neural}
+    and are consequently very suitable for e.g. neuroprosthetic applications.
+    
+    We notice from figure \ref{fig:cortical-measurements} that the low frequency characteristics and small signal amplitudes poses strict 
+    noise requirements on design a \acs{LNA}. In addition we know that \acs{CMOS} low noise design at such low frequencies will not
+    be a straightforward experience because of \acs{CMOS} circuits susceptibility to flicker noise. For the \acs{LNA} design - which is to be introduced
+    next chapter, we will focus on action potential measurements. Therefore flicker noise should be a little less of a problem for us as we are in the 100 Hz to 10 kHz 
+    frequency range. We will however, have to deal with a larger impedance because smaller electrode area is needed to measure action potentials.
+    Also an important remark to make is about eventual LFP signals; as it is assumed that our LNA will be used for interfacing with a microelectrode array, LFP parts ($<$ $\approx$200 Hz) in the recording
+    would be amplified and they would have be filtered out at a later stage in the system if they are unwanted.
+    
+    Fig.\ref{fig:cortical-measurements} also tells us something of what \acf{CMRR} we have to expect from the LNA. Again we focus on action potentials and see that the frequency of interest is
+    higher than e.g. the mains frequency for instance, so we can have a much more relaxed \acs{CMRR} than any other type of neural recording.
+    
+    A guideline summary of LNA design considerations in regards to what type of neural signal one wants to record is given in \cite{yoo2011biomedical-cmos} and illustrated in figure \ref{tab:lna-design-considerations}.
+%--------------------------figure-------------------------------------------------------------------      
+    \begin{figure}
+      \centering
+      \includegraphics[scale=.5]{images/table-LNA-design-considerations.png}
+      \captionsetup{singlelinecheck=off}
+      \caption[dummy]{\texttt{\footnotesize{Summary of the considerations during the design of instrumentation amplifiers for different neural signals.\\
+					      (-) indicates a low/small value \\
+					      (+) indicates a high/large value}}}
+      \label{tab:lna-design-considerations}
+      \end{figure}
+%--------------------------END-------------------------------------------------------------------              
+       
+    \subsubsection{Real-life Application of ideal Polarizable and Non-Polarizable Electrodes} %%refer 4.2 in bimedical cmos
+    \label{subsubsec:electrodes}
+    To be able pick up biopotential-signals, current should flow from the tissue into the acquisition electronics. 
+    As the current is carried by ions in the body of a living being, a transducer is needed to convert ionic current into electronic current.\\*\\*    
+    Enter the \textbf{electrode}. See figure \ref{fig:neural-probe} \\*
+        \begin{wrapfigure}{r}{0.5\textwidth}
+      \centering
+      \vspace{-20pt}
+      \caption{\texttt{\footnotesize{electrode model}}}
+      \includegraphics[width=0.5\textwidth]{images/electrical-probe-model1.png}
+      \vspace{-20pt}
+      \label{fig:probe-model}
+    \end{wrapfigure}
+%--------------------------figure-------------------------------------------------------------------      
+    \begin{wrapfigure}{r}{0.5\textwidth}
+      \centering
+      \vspace{-20pt}
+      \caption{\texttt{\footnotesize{electrode array model}}}
+      \includegraphics[width=0.5\textwidth]{images/electrical-probe-model-arrays.png}
+      \vspace{-20pt}
+      \label{fig:probe-model-array}
+    \end{wrapfigure}
+%--------------------------END-------------------------------------------------------------------  
+    How easily electrons travel through the electrode interface defines if the electrode is considered non-polarizable or polarizable. If current flow 
+    happens by very little energy, the electrode is referred to as being non-polarizable.  As such the electrode would ideally see no over-potentials and 
+    thus, a \emph{perfectly} non-polarizable electrode can be seen as a simple resistor. If no charge crosses the electrode transfer, the electrode is 
+    referred to as polarizable and can ideally be seen as capacitor as we only have a displacement current.
+%--------------------------figure-------------------------------------------------------------------      
+    \begin{figure}
+      \centering
+      \includegraphics[scale=.7]{images/probe-placement2.png}
+      \captionsetup{singlelinecheck=off}
+      \caption[dummy]{\texttt{\footnotesize{       				    
+						    \begin{enumerate}
+						      \item Cortical or subdural electrode placed under the skull directly on the surface of the brain.
+						      \item Neuro-probe array placed on the surface of a brain. The recording electrodes are drawn as dots on the array of probes penetrating the cortex
+						    \end{enumerate}}}}
+      \label{fig:neural-probe}
+      \end{figure}
+%--------------------------END------------------------------------------------------------------- 
+    However, the real world is not so forgiving; no electrode is purely polarizable or non-polarizable, rather something in between. We therefore present a 
+    basic electrical model of a single electrode \cite{GBM8320-2013-electrodes-ch8-pt1} shown in figure \ref{fig:probe-model}.
+    We see from \ref{fig:probe-model} that the source impedance can be modeled by a Thevenin equivalent source with a source impedance of Rs, while the electrode can be 
+    modeled by a capacitor C\textsubscript{A} in parallel with a resistor R\textsubscript{A}.   
+ 
+    Notice from figure \ref{fig:neural-probe} how the different electrode placement generally cover different areas. The impedance of an electrode plays an 
+    important role during the design of the recording circuit when selecting amplifier design topology. We know that as the electrode surface 
+    area decreases, its impedance tends to increase \cite{yoo2011biomedical-cmos}. Thus, the use of probes with high small electrode area
+    forces us to design an amplifier with high input impedance.
+   
+   
+   \subsection{Transistor and Amplifier basics}
+    \label{subsec:trans-amp-basics} 
+  
+  

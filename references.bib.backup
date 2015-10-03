@@ -1,0 +1,32 @@
+% You can generate BibTeX-style bibliography entries from e.g Google Scholar (Cite -> BibTeX)
+
+%%---books
+@book{marcus2014future,
+  title={The Future of the Brain: Essays by the World's Leading Neuroscientists},
+  author={Marcus, Gary and Freeman, Jeremy},
+  year={2014},
+  publisher={Princeton University Press}
+}
+
+
+
+
+%%---articles
+@article{leuthardt2004brain,
+  title={A brain--computer interface using electrocorticographic signals in humans},
+  author={Leuthardt, Eric C and Schalk, Gerwin and Wolpaw, Jonathan R and Ojemann, Jeffrey G and Moran, Daniel W},
+  journal={Journal of neural engineering},
+  volume={1},
+  number={2},
+  pages={63},
+  year={2004},
+  publisher={IOP Publishing}
+}
+@article{hill2012recording,
+  title={Recording human electrocorticographic (ECoG) signals for neuroscientific research and real-time functional cortical mapping},
+  author={Hill, N Jeremy and Gupta, Disha and Brunner, Peter and Gunduz, Aysegul and Adamo, Matthew A and Ritaccio, Anthony and Schalk, Gerwin},
+  journal={Journal of visualized experiments: JoVE},
+  number={64},
+  year={2012},
+  publisher={MyJoVE Corporation}
+}

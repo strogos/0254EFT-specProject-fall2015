@@ -1,0 +1,10 @@
+\chapter{The LNA front-end}
+Given that the \acl{LNA} makes up the first stage in a neural recording device, it easily becomes one of the most important modules in it.  We discovered in chapter \ref{chap:two} that when interfacing with a \acs{MEMS} array - which has become our transducer of interest, we have the ability to amplify both action potentials and \acs{LFP}. We discussed that our design scope will be limited for action potentials and therefore have a more relaxed CMRR than we would have if we were interested in the LFPs. This led us to remark that the amplifier preferably should be attached to the transducer itself. Such a placement compels us to consider another requirement - namely heat dissipation. Findings in  \cite{seese1998characterization} tells us that cells exposed to certain temperatures over prolonged periods of time simply dies. Thus, we will have to limit amplifier power usage.  \cite{harrison2008design} claims that modern \acs{MEMS} arrays consists of something like 100 electrodes and that a 6 x 6 x 2 $mm^3$ must then consume less than 100$\mu$W. We can summarize design requirements as follows:
+
+\begin{enumerate}
+  \item\textbf{Dynamic range} - Fig.\ref{fig:cortical-measurements} indicates that we must have a dynamic range good enough to convey action potentials as low as \mp2mV.
+  \item\textbf{Input Impedance} - Higher input impedance than the transducer as well as negligible dc input current.
+  \item\textbf{Bandwidth} - 100-10kHz to pick up action potentials.
+  \item\textbf{DC offset} - block DC offset at the transducer to prevent unwanted saturation of the amplifier.
+  \item\textbf{Noise} - input noise must be small enough to pick up amplitudes as small as $\simeq$30$\mu$V
+\end{enumerate}

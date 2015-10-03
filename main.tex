@@ -1,0 +1,78 @@
+% A simple LaTeX template for lab reports....
+\documentclass[abstract=on]{scrreprt}
+%\documentclass{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.25in]{geometry} %page margins
+\usepackage{lipsum}
+\usepackage[usestackEOL]{stackengine}
+\setcounter{secnumdepth}{5} %include numbering of subsubsubsusbsusbsections!
+\setcounter{tocdepth}{5}% Include \subsubsubsusbsusbsection in ToC!
+
+
+\usepackage{wrapfig} %wrap text around pics
+
+%linked TOC
+\usepackage{hyperref}
+\hypersetup
+{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+%\usepackage{titlesec}
+\usepackage{url}
+%\usepackage[backend=bibtex]{biblatex}
+%\usepackage[acronym]{glossaries} %only interested in loading acronym-part
+\usepackage[printonlyused,withpage]{acronym}
+
+%\usepackage[printonlyused]{acronym}
+
+%------ Listings --------------
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{orange}{rgb}{1, 0.5, 0}
+
+\definecolor{gray75}{gray}{0.75}
+\definecolor{gray1}{gray}{0.97}
+\definecolor{gray2}{gray}{0.90}
+\definecolor{gray3}{gray}{0.80}
+\definecolor{gray4}{gray}{0.63}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.0, 1.0, 0.7,1.0}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+
+
+\usepackage{natbib}
+
+% Edit the meta.tex file to change title, group number and author names
+\input{meta.tex}
+
+
+\pagenumbering{gobble} %%disable pagenumbering
+\begin{document}
+% The title page, edit if you want to customize it
+\input{title.tex}
+
+% Main matter - edit corresponding file under content/ to change
+\input{content/00-abstract.tex}
+\input{content/000-toc-and-other-special-sections.tex}
+\pagenumbering{arabic} %%enable page numbering
+\input{content/01-introduction.tex}
+\input{content/02-background.tex}
+\input{content/03-neural-LNA-frontend.tex}
+\input{content/04-methodology.tex}
+\input{content/05-results.tex}
+\input{content/06-conclusion.tex}
+
+% Bibliography - edit references.bib and use the \cite command in text
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
