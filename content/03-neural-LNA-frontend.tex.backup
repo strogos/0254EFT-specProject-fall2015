@@ -5,12 +5,21 @@ We discussed that our design scope will be limited for action potentials and the
 led us to remark that the amplifier preferably should be attached to the transducer itself. Such a placement compels us to consider another requirement - namely heat dissipation. Findings in 
 \cite{seese1998characterization} tells us that cells exposed to certain temperatures over prolonged periods of time simply dies. Thus, we will have to limit amplifier power usage. 
 \cite{harrison2008design} claims that modern \acs{MEMS} arrays might consist of something like 100 electrodes and that for example a 6 x 6 x 2 $mm^3$ must then consume less than 100$\mu$W. \\*
+
+
 Another consideration we discussed in chapter \ref{chap:two} was a designs potential noise susceptibility. Even though our bandwidth requirements leave us less vulnerable to flicker noise than designs 
 trying to record biopotential signals other than action potentials, we still have to maintain a satisfactory suppression of input referred noise. Minimizing of input referred noise does often result in
-a relatively quiescent current which again will be limited by our low power consumption requirements. Alas, finding the best noise power trade-off will be one of the main challenges in the design process.
+a relatively high quiescent current; yet, a contradiction here is that the current that can be supplied to the LNA will be limited by our power consumption requirements. Alas, finding the best noise power 
+trade-off will be one of the main challenges in the design process.
 
-
-
+A major drawback in the classical amplifier design topology - e.g. operating transistors in strong inversion, is the fact that transistors in the active region limits a circuits power efficiency. As low-power 
+is critical in a neural recording front-end, an idea is make sure transistors (at least the input pair the differential stage) operates in weak inversion. Now, as opposed to $G_m$ being proportional to the square 
+root of the drain current, the transconductance $G_m$ will be proportional to the drain current \cite{harrison2003low} and ergo achieves a better power efficiency. Maximizing $G_m$ in this way (note that we are aiming for a fixed drain current)In this context, it would be prudent to provide 
+an introduction to the inversion coefficient (IC):
+    \begin{equation} \label{eq:IC}
+      IC=I_d/I_s;
+    \end{equation}
+where $I_s$ is the inversion characteristics current given by
 
 We can summarize design requirements as follows:
 
@@ -23,4 +32,3 @@ We can summarize design requirements as follows:
 \end{enumerate}
 
 
-We 
