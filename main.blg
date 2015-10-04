@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--entry type for "extracell-action-pot-2009" isn't style-file defined
+--line 221 of file references.bib
+Warning--there's a number but no volume in hill2012recording
+You've used 23 entries,
+            2118 wiz_defined-function locations,
+            644 strings with 8717 characters,
+and the built_in function-call counts, 8383 in all, are:
+= -- 788
+> -- 516
+< -- 1
++ -- 208
+- -- 180
+* -- 677
+:= -- 1449
+add.period$ -- 69
+call.type$ -- 23
+change.case$ -- 153
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 249
+empty$ -- 580
+format.name$ -- 180
+if$ -- 1659
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 26
+newline$ -- 118
+num.names$ -- 46
+pop$ -- 156
+preamble$ -- 1
+purify$ -- 135
+quote$ -- 0
+skip$ -- 165
+stack$ -- 0
+substring$ -- 500
+swap$ -- 24
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 82
+warning$ -- 1
+while$ -- 75
+width$ -- 25
+write$ -- 249
+(There were 2 warnings)

@@ -27,12 +27,12 @@ where $I_S$ is the inversion characteristics current, as given by
       I_S= \frac{2 \mu C_{ox} V_t^2}{ \kappa } \cdot W/L;
     \end{equation}
 In equation \ref{eq:inv-char-current}, $\kappa$ would be the gate coupling coefficient in subthreshold operation, $V_t$ the thermal voltage, $C_{ox}$ the gate capacitance per unit area, and $\mu$ the mobility of electrons near the silicon surface. Lastly W and L is the transistor width and length respectively. We note that \cite{harrison2003low} claims $\kappa$ to have a typical value of 0.7. Returning to the inversion coefficient, the same 
-source tells us that IC gives us an understanding of a transistor operating regian, that is IC equates to
+source tells us that IC gives us an understanding of a transistor operating regian, that is IC equates to\footnote{Notice that the overdrive voltages are given for NMOS} \footnote{Notice that $\kappa = \frac{1}{n}$ where $n$ is called the subthreshold swing coefficiant (or ideality factor) and is the reciporal of the rate of change in the channel surface potential as a function of gate voltage \cite{kursun2006multi}}
 
 		    \begin{itemize}
     		    \item strong inversion if IC $>$ 10;
     		    \item medium inversion if 10 $>$ IC $>$ 0.1;
-    		    \item weak inversion if IC $<$ 0.1;
+    		    \item weak inversion if IC $<$ 0.1 ($V_{GS}-V_{TH}$);
 		    \end{itemize}
 
 We can summarize design requirements as follows:
