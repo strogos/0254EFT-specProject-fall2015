@@ -1,0 +1,17 @@
+\o Program:		@(#)$CDS: libManager version 6.1.6 - CAT33 08/24/2014 13:49 (sjfnl844) $
+\o Sub version:		sub-version  s012 
+\o Arguments:		-mpssession virtuoso40470 -mpshost vm-centos7 
+\o Working Directory:	vm-centos7:/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace
+\o 64-bit offsets
+\o Qt version: 		4.7.2
+\o Log file is "/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace/libManager.log".
+\o Opening libManager window.
+\a nrSetCurrentWindow(cdsLibManager)
+\o changeWorkingDir("/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o MPS service: map window
+\a nrResizeWindow(cdsLibManager list(683 217 600 448))
+\o Library Manager customization server connected.
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\o libManager is exiting.
+\a exit(0)
