@@ -7,13 +7,14 @@
 \contentsline {section}{\numberline {2.1}Neural Recording through Biopotential Acquisition}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}The Neural Signals}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Real-life Application of ideal Polarizable \& Non-Polarizable Electrodes}{6}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Transistor and Amplifier basics}{8}{section.2.2}
+\contentsline {section}{\numberline {2.2}MOSFET Based Amplifiers}{8}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Designing Low-Noise and Low-Power \acs {OTA}s}{8}{subsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.1.1}MOSFET's and Level of Inversion}{8}{subsubsection.2.2.1.1}
-\contentsline {subsection}{\numberline {2.2.2}Noise Performance}{8}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.1}Noise Figure}{8}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2.2}Noise Efficiency Factor}{8}{subsubsection.2.2.2.2}
-\contentsline {chapter}{\numberline {3}The LNA front-end}{9}{chapter.3}
+\contentsline {subsubsection}{\numberline {2.2.1.1}Level of Inversion}{8}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.2}Finding $g_m$ using IC and the EKV-model}{9}{subsubsection.2.2.1.2}
+\contentsline {subsection}{\numberline {2.2.2}Noise Performance}{9}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Noise Figure}{9}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Noise Efficiency Factor}{9}{subsubsection.2.2.2.2}
+\contentsline {chapter}{\numberline {3}An LNA front-end for Recording Action Potentials}{10}{chapter.3}
 \contentsline {chapter}{\numberline {4}Design Methodology}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Amplifier Topology}{11}{section.4.1}
 \contentsline {chapter}{\numberline {5}Results}{12}{chapter.5}

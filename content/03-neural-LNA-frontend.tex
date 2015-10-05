@@ -1,39 +1,15 @@
-\chapter{The LNA front-end}
+\chapter{An LNA front-end for Recording Action Potentials}
 Given that the \acl{LNA} makes up the first stage in a neural recording device, it easily becomes one of the most important modules in it. 
 We discovered in chapter \ref{chap:two} that when interfacing with a \acs{MEMS} array - which has become our transducer of interest, we have the ability to amplify both action potentials and \acs{LFP}s. 
 We discussed that our design scope will be limited to action potentials and therefore have a more relaxed CMRR than we would have if we were interested in the LFPs. This line of reasoning eventually 
-led us to remark that the amplifier preferably should be attached to the transducer itself. Such a placement compels us to consider another requirement - namely heat dissipation. Findings in 
+led us to remark that the amplifier preferably should be attached to the transducer itself. Such a placement compels us to consider another factor in the power requirements - namely heat dissipation. Findings in 
 \cite{seese1998characterization} tells us that cells exposed to certain temperatures over prolonged periods of time simply dies. Thus, we will have to limit amplifier power usage. 
-\cite{harrison2008design} claims that modern \acs{MEMS} arrays might consist of something like 100 electrodes and that for example a 6 x 6 x 2 $mm^3$ must then consume less than 100$\mu$W. \\*
+\cite{harrison2008design} claims that modern \acs{MEMS} arrays might consist of something like 100 electrodes and that for example a 6 x 6 x 2 $mm^3$ must then consume less than 100$\mu$W.
 
 Another consideration we discussed in chapter \ref{chap:two} was a designs potential susceptibility to noise. Even though our bandwidth requirements leave us less vulnerable to flicker noise than designs 
 trying to record any biopotential signals other than action potentials, we still have to maintain a satisfactory suppression of input-referred noise. Minimizing of input-referred noise does often result in
-a relatively high quiescent current; yet, a contradiction here is that the current that can be supplied to the LNA will be limited by our power consumption requirements. Alas, finding the best noise power 
-trade-off will be one of the main challenges in the design process.
-
-A major drawback in the classical amplifier design topology - e.g. operating transistors in strong inversion, is the fact that transistors in the active region limits a circuits power efficiency. As low-power 
-is critical in a neural recording front-end, an idea is make sure transistors (mainly referring to the input pair the differential stage) operates in weak inversion. Now, as opposed to $G_m$ being proportional to the square 
-root of the drain current, the transconductance $G_m$ will be proportional to the drain current \cite{harrison2003low} and ergo achieves a better power efficiency. Maximizing $G_m$ in this way will also minimize 
-thermal noise in any CMOS differential amplifier \cite{johns2008analog} (note that we are aiming for a fixed drain current).   Thus, the input pairs in the differential stage  will need  to  have a  large  W/L  ratio. Further on, their lengths should be small so that their widths  also will be as small as possible. This way the input capacitance of the LNA does not become problematically large.
-
-In this context, it would be prudent to provide an introduction to the inversion coefficient (IC) relationship:
-    \begin{equation} 
-    \label{eq:IC}
-      IC=I_D/I_S;
-    \end{equation}
-where $I_S$ is the inversion characteristics current, as given by
-    \begin{equation} 
-    \label{eq:inv-char-current}
-      I_S= \frac{2 \mu C_{ox} V_t^2}{ \kappa } \cdot W/L;
-    \end{equation}
-In equation \ref{eq:inv-char-current}, $\kappa$ would be the gate coupling coefficient in subthreshold operation, $V_t$ the thermal voltage, $C_{ox}$ the gate capacitance per unit area, and $\mu$ the mobility of electrons near the silicon surface. Lastly W and L is the transistor width and length respectively. We note that \cite{harrison2003low} claims $\kappa$ to have a typical value of 0.7. Returning to the inversion coefficient, the same 
-source tells us that IC gives us an understanding of a transistor operating regian, that is IC equates to\footnote{Notice that the overdrive voltages are given for NMOS} \footnote{Notice that $\kappa = \frac{1}{n}$ where $n$ is called the subthreshold swing coefficiant (or ideality factor) and is the reciporal of the rate of change in the channel surface potential as a function of gate voltage \cite{kursun2006multi}}
-
-		    \begin{itemize}
-    		    \item strong inversion if IC $>$ 10;
-    		    \item medium inversion if 10 $>$ IC $>$ 0.1;
-    		    \item weak inversion if IC $<$ 0.1 ($V_{GS}-V_{TH}$);
-		    \end{itemize}
+a relatively high quiescent current; yet, a contradiction here is that the current which can be supplied to the LNA will be limited by our power consumption requirements. Alas, finding the best noise power 
+trade-off is one of the main challenges in the design process.
 
 We can summarize design requirements as follows:
 

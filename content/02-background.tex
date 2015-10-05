@@ -63,7 +63,7 @@
       \centering
       \includegraphics[scale=.5]{images/table-LNA-design-considerations.png}
       \captionsetup{singlelinecheck=off}
-      \caption[dummy]{\texttt{\footnotesize{Summary of the considerations during the design of instrumentation amplifiers for different neural signals.\\
+      \caption[\texttt{\footnotesize{LNA design considerations}}]{\texttt{\footnotesize{Summary of the considerations during the design of instrumentation amplifiers for different neural signals.\\
 					      (-) indicates a low/small value \\
 					      (+) indicates a high/large value}}}
       \label{tab:lna-design-considerations}
@@ -101,7 +101,7 @@
       \centering
       \includegraphics[scale=.7]{images/probe-placement2.png}
       \captionsetup{singlelinecheck=off}
-      \caption[dummy]{\texttt{\footnotesize{       				    
+      \caption[\texttt{\footnotesize{neural probe placement}}]{\texttt{\footnotesize{       				    
 						    \begin{enumerate}
 						      \item Cortical or subdural electrode placed under the skull directly on the surface of the brain.
 						      \item Neuro-probe array placed on the surface of a brain. The recording electrodes are drawn as dots on the array of probes penetrating the cortex
@@ -120,19 +120,55 @@
     forces us to design an amplifier with high input impedance.
    
    
-   \section{Transistor and Amplifier basics}
-    \label{subsec:trans-amp-basics}
+   \section{MOSFET Based Amplifiers}\label{subsec:trans-amp-basics}
+    
       \subsection{Designing Low-Noise and Low-Power \acs{OTA}s}
 	%TODO:
-	...see \cite{harrison2003low} section B.
+	A major drawback in the classical amplifier design topology - e.g. operating transistors in strong inversion, arises from the fact that transistors in the active region limits a circuits power efficiency. As low-power 
+	is critical in a neural recording front-end, an idea is to make sure transistors (mainly referring to the input pair the differential stage) operates in weak inversion. Now, as opposed to $g_m$ being proportional to the square 
+	root of the drain current, the transconductance $g_m$ will be proportional to the drain current \cite{harrison2003low} which gives a better power efficiency. Maximizing $g_m$ in this way will also minimize 
+	thermal noise in any CMOS differential amplifier \cite{johns2008analog} (note that we are aiming for a fixed drain current). Thus, the input pairs in the differential stage  will need  to  have a  large  W/L  ratio. However, 
+	their length should ideally be as small as possible so that their width also is as small as possible. This way the input capacitance of the LNA does not become problematically large.
+	
+	From this we see that the sizing of our transistors are critical in maintaining a low-noise low-power design.
+	\subsubsection{Level of Inversion}\label{subsubsec:lev-of-inv}
+	As low-power also implies low-current; in addition to weak inversion operation
+	we may have transistors working in moderate and strong inversion as well. As such it makes sense to define some tools which helps us use a transistors' level of inversion as a design variable
+	and hence replace the conventional approaches involving the bias current and MOSFET channel widths.
+	In this context, it would be prudent to introduce the inversion coefficient (IC) relationship - sometimes also refered to as level of inversion ratio:
+	    \begin{equation} 
+	    \label{eq:IC}
+	      IC=I_D/I_S;
+	    \end{equation}
+	where the inversion characteristics current $I_S$ is given by
+	    \begin{equation} 
+	    \label{eq:inv-char-current}
+	      I_S= \frac{2 \mu C_{ox} V_t^2}{ \kappa } \cdot W/L;
+	    \end{equation}
+	In equation \ref{eq:inv-char-current}, $\kappa$ would be the gate coupling coefficient in subthreshold operation, $V_t$ the thermal voltage, $C_{ox}$ the gate capacitance per unit area, and $\mu$ the mobility of electrons near the silicon surface. Lastly W and L is the transistor width and length respectively. We note that \cite{harrison2003low} claims $\kappa$ to have a typical value of $\sim$0.7. Returning to the inversion coefficient, the same 
+	source tells us that IC gives us an understanding of a transistor operating region. That is, IC equates to\footnote{Notice that $\kappa = \frac{1}{n}$ where $n$ is called the subthreshold swing coefficiant (or ideality factor) and is the reciporal of the rate of change in the channel surface potential as a function of gate voltage \cite{kursun2006multi}}
+		  \begin{itemize}
+    		    \item strong inversion if IC$>$10;% ($V_{GS}>V_{TH}-100mV$);
+    		    \item medium inversion if 10$>$IC$>$0.1; %($V_{TH}+100mV>V_{GS}>V_{TH}-100mV$);
+    		    \item weak inversion if IC$<$0.1;% ($V_{GS}<V_{TH}-100mV$);
+		  \end{itemize}
+	This nicely contrasts the classical way of describing operating point in terms of gate-source voltage ($V_{GS}$).
+	\subsubsection{Finding $g_m$ using IC and the EKV-model}\label{subsec:maxim-gm-EKV-model}
+	In 1995 \cite{enz1995analytical} proposed a MOSFET-model valid for all operating points by deriving asymptotes for each operating point and linking them together using interpolation functions.
+	This proposal is today being further developed as the EKV-model. They give the following equation for drain current
+	    \begin{equation} \label{eq:Id-EKV}
+	      I_D= I_S[ln(1 + \exp{\frac{\kappa (V_G-V_{TH})-V_S}{2V_T}})]^2;
+	    \end{equation}
+	where the $I_S$ is the same as before and $V_S$ is the source voltage of the transistor.
+	We should remark that the original expression for calculating transconductance derived in \cite{enz1995analytical} is not cited here as it cannot be solved to find IC as a function of transconductance and drain current - which we need in order to maximize $g_m$.
+	Instead we use the following interpolation function - as suggested by \cite{EE5720-Harrison-subtreshold}, to find the transconductance
+	    \begin{equation} \label{eq:gm-EKV}
+	      g_m= \frac{\kappa I_D}{V_t} \cdot \frac{2}{1+ \sqrt{1+4IC}};
+	    \end{equation}	
+	The EKV-model is said to be very helpful in low-power circuit design\cite{harrison2003low} and submicron and nanometer bulk-referenced applications\cite{shaoxi2010mosfet}.
       
-	  \subsubsection{MOSFET's and Level of Inversion}
-	  New design basis  -   level of inversion or inversion coefficient (IC)
 	  
-	  Work with both region of MOSFET operation and the level of inversion
-
-	  Use level of inversion as design variable
-	   - Replaces conventional approaches involving the bias current and the MOSFET channel width
+	 
 	   
 	   
       \subsection{Noise Performance}

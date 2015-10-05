@@ -19,6 +19,13 @@ John~P Donoghue, Jerome~N Sanes, Nicholas~G Hatsopoulos, and Gy{\"o}ngyi
   motor cortex during voluntary movements.
 \newblock {\em Journal of Neurophysiology}, 79(1):159--173, 1998.
 
+\bibitem{enz1995analytical}
+Christian~C Enz, Fran{\c{c}}ois Krummenacher, and Eric~A Vittoz.
+\newblock An analytical mos transistor model valid in all regions of operation
+  and dedicated to low-voltage and low-current applications.
+\newblock {\em Analog integrated circuits and signal processing}, 8(1):83--114,
+  1995.
+
 \bibitem{gunduz2011neural}
 Aysegul Gunduz, Peter Brunner, Amy Daitch, Eric~C Leuthardt, Anthony~L
   Ritaccio, Bijan Pesaran, and Gerwin Schalk.
@@ -30,6 +37,11 @@ Aysegul Gunduz, Peter Brunner, Amy Daitch, Eric~C Leuthardt, Anthony~L
 Reid~R Harrison.
 \newblock The design of integrated circuits to observe brain activity.
 \newblock {\em Proceedings of the IEEE}, 96(7):1203--1216, 2008.
+
+\bibitem{EE5720-Harrison-subtreshold}
+Reid~R Harrison.
+\newblock Mosfet operation in weak and moderate inversion, 2010.
+\newblock \url{http://www.ece.utah.edu/~harrison/ece5720/Subthreshold.pdf}.
 
 \bibitem{harrison2003low}
 Reid~R Harrison and Cameron Charles.
@@ -110,6 +122,13 @@ Timothy~M Seese, Hiroaki Harasaki, Gerald~M Saidel, and Charles~R Davies.
   in the adaptive response of muscle tissue to chronic heating.
 \newblock {\em Laboratory investigation; a journal of technical methods and
   pathology}, 78(12):1553--1562, 1998.
+
+\bibitem{shaoxi2010mosfet}
+WANG Shaoxi.
+\newblock Mosfet model analysis for submicron and nanometer bulk-driven
+  applications.
+\newblock {\em Journal of Computational Information Systems}, 6(7):2277--2285,
+  2010.
 
 \bibitem{extracell-action-pot-2009}
 Spikoscope.
