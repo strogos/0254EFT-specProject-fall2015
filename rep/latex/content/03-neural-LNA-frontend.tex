@@ -1,0 +1,24 @@
+\chapter{An LNA front-end for Recording Action Potentials}
+Given that the \acl{LNA} makes up the first stage in a neural recording device, it easily becomes one of the most important modules in it. 
+We discovered in chapter \ref{chap:two} that when interfacing with a \acs{MEMS} array - which has become our transducer of interest, we have the ability to amplify both action potentials and \acs{LFP}s. 
+We discussed that our design scope will be limited to action potentials and therefore have a more relaxed CMRR than we would have if we were interested in the LFPs. This line of reasoning eventually 
+led us to remark that the amplifier preferably should be attached to the transducer itself. Such a placement compels us to consider another factor in the power requirements - namely heat dissipation. Findings in 
+\cite{seese1998characterization} tells us that cells exposed to certain temperatures over prolonged periods of time simply dies. Thus, we will have to limit amplifier power usage. 
+\cite{harrison2008design} claims that modern \acs{MEMS} arrays might consist of something like 100 electrodes and that for example a 6 x 6 x 2 $mm^3$ must then consume less than 100$\mu$W.
+
+Another consideration we discussed in chapter \ref{chap:two} was a designs potential susceptibility to noise. Even though our bandwidth requirements leave us less vulnerable to flicker noise than designs 
+trying to record any biopotential signals other than action potentials, we still have to maintain a satisfactory suppression of input-referred noise. Minimizing of input-referred noise does often result in
+a relatively high quiescent current; yet, a contradiction here is that the current which can be supplied to the LNA will be limited by our power consumption requirements. Alas, finding the best noise power 
+trade-off is one of the main challenges in the design process.
+
+We can summarize design requirements as follows:
+
+\begin{enumerate}
+  \item\textbf{Dynamic range} - Fig.\ref{fig:cortical-measurements} indicates that we must have a dynamic range good enough to convey action potentials as low as $\pm$2mV.
+  \item\textbf{Input Impedance} - Higher input impedance than the transducer as well as negligible dc input current.
+  \item\textbf{Bandwidth} - 100-10kHz to pick up action potentials.
+  \item\textbf{DC offset} - block DC offset at the transducer to prevent unwanted saturation of the amplifier.
+  \item\textbf{Noise} - input noise must be small enough to pick up amplitudes as small as $\simeq$30$\mu$V
+\end{enumerate}
+
+

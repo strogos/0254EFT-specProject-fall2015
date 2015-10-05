@@ -1,0 +1,163 @@
+\begin{thebibliography}{10}
+
+\bibitem{chang2010categorical}
+Edward~F Chang, Jochem~W Rieger, Keith Johnson, Mitchel~S Berger, Nicholas~M
+  Barbaro, and Robert~T Knight.
+\newblock Categorical speech representation in human superior temporal gyrus.
+\newblock {\em Nature neuroscience}, 13(11):1428--1432, 2010.
+
+\bibitem{cohen2000contributions}
+Ivan Cohen and Richard Miles.
+\newblock Contributions of intrinsic and synaptic activities to the generation
+  of neuronal discharges in in vitro hippocampus.
+\newblock {\em The Journal of physiology}, 524(2):485--502, 2000.
+
+\bibitem{donoghue1998neural}
+John~P Donoghue, Jerome~N Sanes, Nicholas~G Hatsopoulos, and Gy{\"o}ngyi
+  Ga{\'a}l.
+\newblock Neural discharge and local field potential oscillations in primate
+  motor cortex during voluntary movements.
+\newblock {\em Journal of Neurophysiology}, 79(1):159--173, 1998.
+
+\bibitem{enz1995analytical}
+Christian~C Enz, Fran{\c{c}}ois Krummenacher, and Eric~A Vittoz.
+\newblock An analytical mos transistor model valid in all regions of operation
+  and dedicated to low-voltage and low-current applications.
+\newblock {\em Analog integrated circuits and signal processing}, 8(1):83--114,
+  1995.
+
+\bibitem{gunduz2011neural}
+Aysegul Gunduz, Peter Brunner, Amy Daitch, Eric~C Leuthardt, Anthony~L
+  Ritaccio, Bijan Pesaran, and Gerwin Schalk.
+\newblock Neural correlates of visual--spatial attention in
+  electrocorticographic signals in humans.
+\newblock {\em Frontiers in human neuroscience}, 5:89, 2011.
+
+\bibitem{harrison2008design}
+Reid~R Harrison.
+\newblock The design of integrated circuits to observe brain activity.
+\newblock {\em Proceedings of the IEEE}, 96(7):1203--1216, 2008.
+
+\bibitem{EE5720-Harrison-subtreshold}
+Reid~R Harrison.
+\newblock Mosfet operation in weak and moderate inversion, 2010.
+\newblock \url{http://www.ece.utah.edu/~harrison/ece5720/Subthreshold.pdf}.
+
+\bibitem{harrison2003low}
+Reid~R Harrison and Cameron Charles.
+\newblock A low-power low-noise cmos amplifier for neural recording
+  applications.
+\newblock {\em Solid-State Circuits, IEEE Journal of}, 38(6):958--965, 2003.
+
+\bibitem{hill2012recording}
+N~Jeremy Hill, Disha Gupta, Peter Brunner, Aysegul Gunduz, Matthew~A Adamo,
+  Anthony Ritaccio, and Gerwin Schalk.
+\newblock Recording human electrocorticographic (ecog) signals for
+  neuroscientific research and real-time functional cortical mapping.
+\newblock {\em Journal of visualized experiments: JoVE}, (64), 2012.
+
+\bibitem{hochberg2006neuronal}
+Leigh~R Hochberg, Mijail~D Serruya, Gerhard~M Friehs, Jon~A Mukand, Maryam
+  Saleh, Abraham~H Caplan, Almut Branner, David Chen, Richard~D Penn, and
+  John~P Donoghue.
+\newblock Neuronal ensemble control of prosthetic devices by a human with
+  tetraplegia.
+\newblock {\em Nature}, 442(7099):164--171, 2006.
+
+\bibitem{johns2008analog}
+David~A Johns and Ken Martin.
+\newblock {\em Analog integrated circuit design}.
+\newblock John Wiley \& Sons, 2008.
+
+\bibitem{kandel2000principles}
+Eric~R Kandel, James~H Schwartz, Thomas~M Jessell, et~al.
+\newblock {\em Principles of neural science}, volume~4.
+\newblock McGraw-Hill New York, 2000.
+
+\bibitem{kipke2003silicon}
+Daryl~R Kipke, Rio~J Vetter, Justin~C Williams, and Jamille~F Hetke.
+\newblock Silicon-substrate intracortical microelectrode arrays for long-term
+  recording of neuronal spike activity in cerebral cortex.
+\newblock {\em Neural Systems and Rehabilitation Engineering, IEEE Transactions
+  on}, 11(2):151--155, 2003.
+
+\bibitem{kursun2006multi}
+Volkan Kursun and Eby~G Friedman.
+\newblock {\em Multi-voltage CMOS circuit design}.
+\newblock John Wiley \& Sons, 2006.
+
+\bibitem{marcus2014future}
+Gary Marcus and Jeremy Freeman.
+\newblock {\em The Future of the Brain: Essays by the World's Leading
+  Neuroscientists}.
+\newblock Princeton University Press, 2014.
+
+\bibitem{miller2007spectral}
+Kai~J Miller, Eric~C Leuthardt, Gerwin Schalk, Rajesh~PN Rao, Nicholas~R
+  Anderson, Daniel~W Moran, John~W Miller, and Jeffrey~G Ojemann.
+\newblock Spectral changes in cortical surface potentials during motor
+  movement.
+\newblock {\em The Journal of neuroscience}, 27(9):2424--2432, 2007.
+
+\bibitem{najafi1986implantable}
+Khalil Najafi and Kensall~D Wise.
+\newblock An implantable multielectrode array with on-chip signal processing.
+\newblock {\em Solid-State Circuits, IEEE Journal of}, 21(6):1035--1044, 1986.
+
+\bibitem{olsson2005three}
+Roy~H Olsson~III and Kensall~D Wise.
+\newblock A three-dimensional neural recording microsystem with implantable
+  data compression circuitry.
+\newblock {\em Solid-State Circuits, IEEE Journal of}, 40(12):2796--2804, 2005.
+
+\bibitem{GBM8320-2013-electrodes-ch8-pt1}
+Mohamad Sawan.
+\newblock Electrodes - part i, 2013.
+\newblock
+  \url{http://www.groupes.polymtl.ca/gbm8320/Ch8_P1_Electrodes_web.pdf}.
+
+\bibitem{seese1998characterization}
+Timothy~M Seese, Hiroaki Harasaki, Gerald~M Saidel, and Charles~R Davies.
+\newblock Characterization of tissue morphology, angiogenesis, and temperature
+  in the adaptive response of muscle tissue to chronic heating.
+\newblock {\em Laboratory investigation; a journal of technical methods and
+  pathology}, 78(12):1553--1562, 1998.
+
+\bibitem{shaoxi2010mosfet}
+WANG Shaoxi.
+\newblock Mosfet model analysis for submicron and nanometer bulk-driven
+  applications.
+\newblock {\em Journal of Computational Information Systems}, 6(7):2277--2285,
+  2010.
+
+\bibitem{extracell-action-pot-2009}
+Spikoscope.
+\newblock {Extracellular} action potentials, 2009.
+\newblock
+  \url{http://spikoscope.sourceforge.net/Spikoscope/Extracellular.html}.
+
+\bibitem{spira2013multi}
+Micha~E Spira and Aviad Hai.
+\newblock Multi-electrode array technologies for neuroscience and cardiology.
+\newblock {\em Nature nanotechnology}, 8(2):83--94, 2013.
+
+\bibitem{wessberg2000real}
+Johan Wessberg, Christopher~R Stambaugh, Jerald~D Kralik, Pamela~D Beck, Mark
+  Laubach, John~K Chapin, Jung Kim, S~James Biggs, Mandayam~A Srinivasan, and
+  Miguel~AL Nicolelis.
+\newblock Real-time prediction of hand trajectory by ensembles of cortical
+  neurons in primates.
+\newblock {\em Nature}, 408(6810):361--365, 2000.
+
+\bibitem{wise2004wireless}
+KD~Wise, DJ~Anderson, JF~Hetke, DR~Kipke, and K~Najafi.
+\newblock Wireless implantable microsystems: high-density electronic interfaces
+  to the nervous system.
+\newblock {\em Proceedings of the IEEE}, 92(1):76--97, 2004.
+
+\bibitem{yoo2011biomedical-cmos}
+Hoi-Jun Yoo and Chris Van~Hoof.
+\newblock {\em Bio-Medical CMOS ICs}.
+\newblock Springer, 2011.
+
+\end{thebibliography}

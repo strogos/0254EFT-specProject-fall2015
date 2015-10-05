@@ -1,0 +1,21 @@
+%%init TOC
+\newpage
+  \tableofcontents
+ % \setcounter{tocdepth}{5}
+  
+\newpage
+  %%Acronyms
+  \section*{List of Acronyms}
+  \begin{acronym}
+    \acro{LNA}{Low Noise Amplifier}
+    \acro{ECoG}{Electrocorticography}
+    \acro{EEG}{Electroencephalography}
+    \acro{iEEG}{intercranial Electroencephalography}
+    \acro{IC}{Integrated Circuit}
+    \acro{CMOS}{Complementary Metal-Oxide-Semiconductor}
+    \acro{LFP}{Local Field Potentials}
+    \acro{MEMS}{Microelectromechanical System}
+    \acro{ADC}{Analog to Digital Converter}
+  \end{acronym}
+
+\newpage
