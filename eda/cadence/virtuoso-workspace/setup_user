@@ -20,3 +20,11 @@ PATH=$CDSHOME/tools/dfII/bin/:$CDSHOME/tools/bin/:$MMSIMHOME/tools/bin/:$MD_HOME
 export CDS_Netlisting_Mode="Analog"
 export CDS_AUTO_64BIT=all
 
+##copy states of simulator config (must be done manually)
+read -p "Copy .artis_states? (copy simulator states which you can load from ALE) [yn]" answer
+if [[ $answer = y ]] ; then
+  # run the command
+  cp -rf  .artist_states/ ~/.
+fi
+
+read -p "...done!"
