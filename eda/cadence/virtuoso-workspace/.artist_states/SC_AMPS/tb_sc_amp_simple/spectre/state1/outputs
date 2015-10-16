@@ -11,7 +11,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/v_out"
+tmp1->signal = "/out_ideal"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -43,7 +43,7 @@ list(tmp1)
 )
 tmp1->value = nil
 tmp1->plot = 't
-tmp1->save = 't
+tmp1->save = nil
 tmp1->march = nil
 tmp1->index = 1
 tmp1->timeStamp = nil
@@ -66,7 +66,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/V_in+"
+tmp1->signal = "/out"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -98,7 +98,7 @@ list(tmp1)
 )
 tmp1->value = nil
 tmp1->plot = 't
-tmp1->save = 't
+tmp1->save = nil
 tmp1->march = nil
 tmp1->index = 2
 tmp1->timeStamp = nil
@@ -121,7 +121,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/V_in-"
+tmp1->signal = "/in"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -153,7 +153,7 @@ list(tmp1)
 )
 tmp1->value = nil
 tmp1->plot = 't
-tmp1->save = 't
+tmp1->save = nil
 tmp1->march = nil
 tmp1->index = 3
 tmp1->timeStamp = nil
@@ -173,23 +173,11 @@ tmp1 = make_sevOutputStruct()
 (unless tmp1
 tmp1 = (ncons nil)
 )
-tmp1->definedIn = ""
-tmp1->name = "DC-gain"
-tmp1->expression = (let
-(tmp1 tmp2)
-tmp1 = 'deriv
-tmp2 = (let
-(tmp1 tmp2 tmp3 tmp4)
-tmp1 = 'v
-tmp2 = "/V_out"
-tmp3 = '?result
-tmp4 = "dc"
-list(tmp1 tmp2 tmp3 tmp4)
-)
-list(tmp1 tmp2)
-)
-tmp1->signal = nil
-tmp1->scriptFile = ""
+tmp1->inLastSet = nil
+tmp1->name = nil
+tmp1->expression = nil
+tmp1->signal = "/amp/in"
+tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
 tmp1->displayIt = nil
@@ -201,12 +189,26 @@ tmp1->saveMasterScriptFile = nil
 tmp1->isReferenced = nil
 tmp1->lastEvalTime = nil
 tmp1->origin = nil
-tmp1->type = nil
+tmp1->type = 'terminal
 tmp1->areaTable = nil
-tmp1->selectionDetail = nil
+tmp1->selectionDetail = (let
+(tmp1)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = 'color
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = "y7"
+tmp2 = "drawing"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+list(tmp1)
+)
 tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
+tmp1->plot = nil
+tmp1->save = nil
 tmp1->march = nil
 tmp1->index = 4
 tmp1->timeStamp = nil
@@ -227,14 +229,13 @@ tmp1 = make_sevOutputStruct()
 tmp1 = (ncons nil)
 )
 tmp1->inLastSet = nil
-tmp1->definedIn = "XYZ"
-tmp1->name = "I_bias_M4"
+tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/I0/net016"
-tmp1->scriptFile = ""
+tmp1->signal = "/amp/out"
+tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
-tmp1->displayIt = 't
+tmp1->displayIt = nil
 tmp1->internalName = nil
 tmp1->masterName = nil
 tmp1->masterScriptFile = nil
@@ -243,7 +244,7 @@ tmp1->saveMasterScriptFile = nil
 tmp1->isReferenced = nil
 tmp1->lastEvalTime = nil
 tmp1->origin = nil
-tmp1->type = 'net
+tmp1->type = 'terminal
 tmp1->areaTable = nil
 tmp1->selectionDetail = (let
 (tmp1)
@@ -252,7 +253,7 @@ tmp1 = (let
 tmp1 = 'color
 tmp2 = (let
 (tmp1 tmp2)
-tmp1 = "y7"
+tmp1 = "y8"
 tmp2 = "drawing"
 list(tmp1 tmp2)
 )
@@ -262,7 +263,7 @@ list(tmp1)
 )
 tmp1->value = nil
 tmp1->plot = nil
-tmp1->save = 't
+tmp1->save = nil
 tmp1->march = nil
 tmp1->index = 5
 tmp1->timeStamp = nil
@@ -283,14 +284,13 @@ tmp1 = make_sevOutputStruct()
 tmp1 = (ncons nil)
 )
 tmp1->inLastSet = nil
-tmp1->definedIn = "XYZ"
-tmp1->name = "I_bias_M3"
+tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/I0/net8"
-tmp1->scriptFile = ""
+tmp1->signal = "/amp/phi2"
+tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
-tmp1->displayIt = 't
+tmp1->displayIt = nil
 tmp1->internalName = nil
 tmp1->masterName = nil
 tmp1->masterScriptFile = nil
@@ -299,7 +299,7 @@ tmp1->saveMasterScriptFile = nil
 tmp1->isReferenced = nil
 tmp1->lastEvalTime = nil
 tmp1->origin = nil
-tmp1->type = 'net
+tmp1->type = 'terminal
 tmp1->areaTable = nil
 tmp1->selectionDetail = (let
 (tmp1)
@@ -308,7 +308,7 @@ tmp1 = (let
 tmp1 = 'color
 tmp2 = (let
 (tmp1 tmp2)
-tmp1 = "y1"
+tmp1 = "y9"
 tmp2 = "drawing"
 list(tmp1 tmp2)
 )
@@ -317,8 +317,8 @@ list(tmp1 tmp2)
 list(tmp1)
 )
 tmp1->value = nil
-tmp1->plot = nil
-tmp1->save = nil
+tmp1->plot = 't
+tmp1->save = 't
 tmp1->march = nil
 tmp1->index = 6
 tmp1->timeStamp = nil
@@ -338,37 +338,11 @@ tmp1 = make_sevOutputStruct()
 (unless tmp1
 tmp1 = (ncons nil)
 )
-tmp1->definedIn = ""
-tmp1->name = "db20_ac_gain"
-tmp1->expression = (let
-(tmp1 tmp2)
-tmp1 = 'dB20
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = 'abs
-tmp2 = (let
-(tmp1 tmp2 tmp3)
-tmp1 = 'quotient
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = 'VF
-tmp2 = "/v_out"
-list(tmp1 tmp2)
-)
-tmp3 = (let
-(tmp1 tmp2)
-tmp1 = 'VF
-tmp2 = "/V_in-"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2 tmp3)
-)
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-tmp1->signal = nil
-tmp1->scriptFile = ""
+tmp1->inLastSet = nil
+tmp1->name = nil
+tmp1->expression = nil
+tmp1->signal = "/amp/phi1"
+tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
 tmp1->displayIt = nil
@@ -380,76 +354,28 @@ tmp1->saveMasterScriptFile = nil
 tmp1->isReferenced = nil
 tmp1->lastEvalTime = nil
 tmp1->origin = nil
-tmp1->type = nil
+tmp1->type = 'terminal
 tmp1->areaTable = nil
-tmp1->selectionDetail = nil
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = nil
-tmp1->march = nil
-tmp1->index = 7
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
+tmp1->selectionDetail = (let
+(tmp1)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = 'color
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = "y1"
+tmp2 = "drawing"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
 list(tmp1)
 )
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->definedIn = ""
-tmp1->name = "ac_gain_mag"
-tmp1->expression = (let
-(tmp1 tmp2)
-tmp1 = 'abs
-tmp2 = (let
-(tmp1 tmp2 tmp3)
-tmp1 = 'quotient
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = 'VF
-tmp2 = "/v_out"
-list(tmp1 tmp2)
-)
-tmp3 = (let
-(tmp1 tmp2)
-tmp1 = 'VF
-tmp2 = "/V_in-"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2 tmp3)
-)
-list(tmp1 tmp2)
-)
-tmp1->signal = nil
-tmp1->scriptFile = ""
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->type = nil
-tmp1->areaTable = nil
-tmp1->selectionDetail = nil
 tmp1->value = nil
 tmp1->plot = 't
-tmp1->save = nil
+tmp1->save = 't
 tmp1->march = nil
-tmp1->index = 8
+tmp1->index = 7
 tmp1->timeStamp = nil
 tmp1->graphType = nil
 tmp1->yaxisLabel = nil
