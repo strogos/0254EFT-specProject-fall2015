@@ -25,7 +25,7 @@ tmp3 = make_sevVariableStruct()
 tmp3 = (ncons nil)
 )
 tmp3->name = "vic"
-tmp3->expression = "300m"
+tmp3->expression = "30m"
 tmp3->index = 3
 (unless tmp4
 tmp4 = make_sevVariableStruct()
