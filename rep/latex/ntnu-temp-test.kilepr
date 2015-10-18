@@ -269,10 +269,10 @@ order=9
 
 [item:notes.tex]
 archive=true
-column=139
+column=130
 encoding=ISO-8859-1
 highlight=LaTeX
-line=29
+line=31
 mode=LaTeX
 open=true
 order=10
@@ -368,8 +368,8 @@ JumpList=
 ViMarks=.,1,86,[,1,74,],1,86
 
 [view-settings,view=0,item:notes.tex]
-CursorColumn=139
-CursorLine=29
+CursorColumn=130
+CursorLine=31
 JumpList=
 ViMarks=.,18,59,[,18,44,],18,59
 

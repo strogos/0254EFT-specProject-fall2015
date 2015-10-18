@@ -12,7 +12,5 @@ DEFINE NCSU_TechLib_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
 DEFINE NCSU_Devices_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_Devices_FreePDK45
 
 
-DEFINE ACMOS1 ~/cadence/workspace/AnalogCMOS1/00-cad-tut/ACMOS1
-DEFINE test ~/cadence/workspace/AnalogCMOS1/test
-DEFINE testing ~/cadence/workspace/AnalogCMOS1/testing
-DEFINE NeuralInterface00 /home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace/NeuralInterface00
+#DEFINE ACMOS1 ~/cadence/workspace/AnalogCMOS1/00-cad-tut/ACMOS1
+DEFINE NeuralInterface00 ~/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace/NeuralInterface00
