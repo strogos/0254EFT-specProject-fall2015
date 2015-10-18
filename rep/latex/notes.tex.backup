@@ -1,0 +1,15 @@
+TODOs and ideas:
+  FUTURE IDEAS:
+  {
+    ->Be able to configure amplifier to record either LFPs (< 1 Hz to 300) or neural spikes (300 Hz > 1 kHz??)
+    ref. MIT phd..0004
+    
+    ->programmable gain (100-1000?)
+    
+    ->Harvest energy from body?
+   }
+    
+  TODOs:
+  {
+    -> compare LNA to previous articles (p.45 in MIT-thesis) 
+  }

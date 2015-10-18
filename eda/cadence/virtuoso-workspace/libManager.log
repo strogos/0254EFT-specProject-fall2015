@@ -1,0 +1,21 @@
+\o Program:		@(#)$CDS: libManager version 6.1.6 - CAT33 08/24/2014 13:49 (sjfnl844) $
+\o Sub version:		sub-version  s012 
+\o Arguments:		-mpssession virtuoso17847 -mpshost oroborus-gentoo 
+\o Working Directory:	oroborus-gentoo:/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace
+\o 64-bit offsets
+\o Qt version: 		4.7.2
+\o Log file is "/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace/libManager.log".
+\o Opening libManager window.
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(1924 0 600 427))
+\o changeWorkingDir("/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o MPS service: map window
+\w Warning: The directory: '/home/strogos/cadence/workspace/AnalogCMOS1/testing' does not exist
+\w 	but was defined in libFile '/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace/cds.lib' for Lib 'testing'.
+\w Warning: The directory: '/home/strogos/cadence/workspace/AnalogCMOS1/test' does not exist
+\w 	but was defined in libFile '/home/strogos/cadence/workspace/0254EFT-specProject-spring2015/eda/cadence/virtuoso-workspace/cds.lib' for Lib 'test'.
+\o Library Manager customization server connected.
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\o libManager is exiting.
+\a exit(0)

@@ -1,0 +1,251 @@
+% You can generate BibTeX-style bibliography entries from e.g Google Scholar (Cite -> BibTeX)
+
+%%---books
+@book{marcus2014future,
+  title={The Future of the Brain: Essays by the World's Leading Neuroscientists},
+  author={Marcus, Gary and Freeman, Jeremy},
+  year={2014},
+  publisher={Princeton University Press}
+}
+@book{yoo2011biomedical-cmos,
+  title={Bio-Medical CMOS ICs},
+  author={Yoo, Hoi-Jun and Van Hoof, Chris},
+  year={2011},
+  publisher={Springer}
+}
+@book{kandel2000principles,
+  title={Principles of neural science},
+  author={Kandel, Eric R and Schwartz, James H and Jessell, Thomas M and others},
+  volume={4},
+  year={2000},
+  publisher={McGraw-Hill New York}
+}
+@book{johns2008analog,
+  title={Analog integrated circuit design},
+  author={Johns, David A and Martin, Ken},
+  year={2008},
+  publisher={John Wiley \& Sons}
+}
+@book{kursun2006multi,
+  title={Multi-voltage CMOS circuit design},
+  author={Kursun, Volkan and Friedman, Eby G},
+  year={2006},
+  publisher={John Wiley \& Sons}
+}
+
+
+
+
+%%---articles
+@article{leuthardt2004brain,
+  title={A brain--computer interface using electrocorticographic signals in humans},
+  author={Leuthardt, Eric C and Schalk, Gerwin and Wolpaw, Jonathan R and Ojemann, Jeffrey G and Moran, Daniel W},
+  journal={Journal of neural engineering},
+  volume={1},
+  number={2},
+  pages={63},
+  year={2004},
+  publisher={IOP Publishing}
+}
+@article{hill2012recording,
+  title={Recording human electrocorticographic (ECoG) signals for neuroscientific research and real-time functional cortical mapping},
+  author={Hill, N Jeremy and Gupta, Disha and Brunner, Peter and Gunduz, Aysegul and Adamo, Matthew A and Ritaccio, Anthony and Schalk, Gerwin},
+  journal={Journal of visualized experiments: JoVE},
+  number={64},
+  year={2012},
+  publisher={MyJoVE Corporation}
+}
+@article{miller2007spectral,
+  title={Spectral changes in cortical surface potentials during motor movement},
+  author={Miller, Kai J and Leuthardt, Eric C and Schalk, Gerwin and Rao, Rajesh PN and Anderson, Nicholas R and Moran, Daniel W and Miller, John W and Ojemann, Jeffrey G},
+  journal={The Journal of neuroscience},
+  volume={27},
+  number={9},
+  pages={2424--2432},
+  year={2007},
+  publisher={Soc Neuroscience}
+}
+@article{chang2010categorical,
+  title={Categorical speech representation in human superior temporal gyrus},
+  author={Chang, Edward F and Rieger, Jochem W and Johnson, Keith and Berger, Mitchel S and Barbaro, Nicholas M and Knight, Robert T},
+  journal={Nature neuroscience},
+  volume={13},
+  number={11},
+  pages={1428--1432},
+  year={2010},
+  publisher={Nature Publishing Group}
+}
+@article{gunduz2011neural,
+  title={Neural correlates of visual--spatial attention in electrocorticographic signals in humans},
+  author={Gunduz, Aysegul and Brunner, Peter and Daitch, Amy and Leuthardt, Eric C and Ritaccio, Anthony L and Pesaran, Bijan and Schalk, Gerwin},
+  journal={Frontiers in human neuroscience},
+  volume={5},
+  pages={89},
+  year={2011},
+  publisher={Frontiers}
+}
+@article{harrison2008design,
+  title={The design of integrated circuits to observe brain activity},
+  author={Harrison, Reid R},
+  journal={Proceedings of the IEEE},
+  volume={96},
+  number={7},
+  pages={1203--1216},
+  year={2008},
+  publisher={IEEE}
+}
+@article{harrison2003low,
+  title={A low-power low-noise CMOS amplifier for neural recording applications},
+  author={Harrison, Reid R and Charles, Cameron},
+  journal={Solid-State Circuits, IEEE Journal of},
+  volume={38},
+  number={6},
+  pages={958--965},
+  year={2003},
+  publisher={IEEE}
+}
+@article{najafi1986implantable,
+  title={An implantable multielectrode array with on-chip signal processing},
+  author={Najafi, Khalil and Wise, Kensall D},
+  journal={Solid-State Circuits, IEEE Journal of},
+  volume={21},
+  number={6},
+  pages={1035--1044},
+  year={1986},
+  publisher={IEEE}
+}
+@article{wise2004wireless,
+  title={Wireless implantable microsystems: high-density electronic interfaces to the nervous system},
+  author={Wise, KD and Anderson, DJ and Hetke, JF and Kipke, DR and Najafi, K},
+  journal={Proceedings of the IEEE},
+  volume={92},
+  number={1},
+  pages={76--97},
+  year={2004},
+  publisher={IEEE}
+}
+@article{olsson2005three,
+  title={A three-dimensional neural recording microsystem with implantable data compression circuitry},
+  author={Olsson III, Roy H and Wise, Kensall D},
+  journal={Solid-State Circuits, IEEE Journal of},
+  volume={40},
+  number={12},
+  pages={2796--2804},
+  year={2005},
+  publisher={IEEE}
+}
+@article{spira2013multi,
+  title={Multi-electrode array technologies for neuroscience and cardiology},
+  author={Spira, Micha E and Hai, Aviad},
+  journal={Nature nanotechnology},
+  volume={8},
+  number={2},
+  pages={83--94},
+  year={2013},
+  publisher={Nature Publishing Group}
+}
+@article{cohen2000contributions,
+  title={Contributions of intrinsic and synaptic activities to the generation of neuronal discharges in in vitro hippocampus},
+  author={Cohen, Ivan and Miles, Richard},
+  journal={The Journal of physiology},
+  volume={524},
+  number={2},
+  pages={485--502},
+  year={2000},
+  publisher={Wiley Online Library}
+}
+@article{donoghue1998neural,
+  title={Neural discharge and local field potential oscillations in primate motor cortex during voluntary movements},
+  author={Donoghue, John P and Sanes, Jerome N and Hatsopoulos, Nicholas G and Ga{\'a}l, Gy{\"o}ngyi},
+  journal={Journal of Neurophysiology},
+  volume={79},
+  number={1},
+  pages={159--173},
+  year={1998},
+  publisher={Am Physiological Soc}
+}
+@article{kipke2003silicon,
+  title={Silicon-substrate intracortical microelectrode arrays for long-term recording of neuronal spike activity in cerebral cortex},
+  author={Kipke, Daryl R and Vetter, Rio J and Williams, Justin C and Hetke, Jamille F},
+  journal={Neural Systems and Rehabilitation Engineering, IEEE Transactions on},
+  volume={11},
+  number={2},
+  pages={151--155},
+  year={2003},
+  publisher={IEEE}
+}
+@article{wessberg2000real,
+  title={Real-time prediction of hand trajectory by ensembles of cortical neurons in primates},
+  author={Wessberg, Johan and Stambaugh, Christopher R and Kralik, Jerald D and Beck, Pamela D and Laubach, Mark and Chapin, John K and Kim, Jung and Biggs, S James and Srinivasan, Mandayam A and Nicolelis, Miguel AL},
+  journal={Nature},
+  volume={408},
+  number={6810},
+  pages={361--365},
+  year={2000},
+  publisher={Nature Publishing Group}
+}
+@article{hochberg2006neuronal,
+  title={Neuronal ensemble control of prosthetic devices by a human with tetraplegia},
+  author={Hochberg, Leigh R and Serruya, Mijail D and Friehs, Gerhard M and Mukand, Jon A and Saleh, Maryam and Caplan, Abraham H and Branner, Almut and Chen, David and Penn, Richard D and Donoghue, John P},
+  journal={Nature},
+  volume={442},
+  number={7099},
+  pages={164--171},
+  year={2006},
+  publisher={Nature Publishing Group}
+}
+@article{seese1998characterization,
+  title={Characterization of tissue morphology, angiogenesis, and temperature in the adaptive response of muscle tissue to chronic heating.},
+  author={Seese, Timothy M and Harasaki, Hiroaki and Saidel, Gerald M and Davies, Charles R},
+  journal={Laboratory investigation; a journal of technical methods and pathology},
+  volume={78},
+  number={12},
+  pages={1553--1562},
+  year={1998}
+}
+@article{enz1995analytical,
+  title={An analytical MOS transistor model valid in all regions of operation and dedicated to low-voltage and low-current applications},
+  author={Enz, Christian C and Krummenacher, Fran{\c{c}}ois and Vittoz, Eric A},
+  journal={Analog integrated circuits and signal processing},
+  volume={8},
+  number={1},
+  pages={83--114},
+  year={1995},
+  publisher={Springer}
+}
+
+
+%%%presentations
+
+%lectures GBM8320 - Dispositifs M�dicaux Intelligents
+@misc{GBM8320-2013-electrodes-ch8-pt1,
+  author={Mohamad Sawan},
+  title={Electrodes - Part I},
+  year={2013},
+  note={\url{http://www.groupes.polymtl.ca/gbm8320/Ch8_P1_Electrodes_web.pdf}},
+}
+@misc{ECE532-2005-ekv-vs-bsim,
+  author={Stephen C. Terry},
+  title={An Introduction to the EKV Model and a Comparison of EKV to BSIM},
+  year={2005},
+  note={\url{http://web.eecs.utk.edu/~bblalock/ece532/ece532_pres_ekv_bsim.pdf}},
+}
+@misc{EE5720-Harrison-subtreshold,
+  author={Stephen C. Terry},
+  title={MOSFET Operation in Weak and Moderate Inversion},
+  year={2010},
+  note={\url{http://www.ece.utah.edu/~harrison/ece5720/Subthreshold.pdf}},
+}
+
+
+
+%%websites
+@online{extracell-action-pot-2009,
+  author = {Spikoscope},
+  title = {{Extracellular} Action Potentials},
+  year = 2009,
+  note={\url{http://spikoscope.sourceforge.net/Spikoscope/Extracellular.html}},
+  url = {http://spikoscope.sourceforge.net/Spikoscope/Extracellular.html},
+  urldate = {2015-09-26}
+}
+
